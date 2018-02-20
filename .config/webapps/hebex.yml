@@ -1,0 +1,46 @@
+# HEBEX sites
+
+sysadmin:
+  name: SysAdmin
+  url: https://sysadmin.orangeportails.net
+  icon: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Orange_logo.svg/1200px-Orange_logo.svg.png
+  categories: Hebex;DFY;Orange;Sysadmin;
+
+tickets:
+  name: Tickets
+  url: https://hebex-tickets.orangeportails.net
+  icon: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Orange_logo.svg/1200px-Orange_logo.svg.png
+  categories: Hebex;DFY;Orange;Tickets;
+ 
+gitlab:
+  name: Gitlab
+  url: https://gitlab.si.francetelecom.fr
+  icon: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Orange_logo.svg/1200px-Orange_logo.svg.png
+  categories: Hebex;DFY;Orange;Git;Gitlab;
+
+forge:
+  name: Orange Forge
+  url: https://www.forge.orange-labs.fr
+  icon: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Orange_logo.svg/1200px-Orange_logo.svg.png
+  categories: Hebex;DFY;Orange;Forge;
+
+wiki:
+  name: Wiki Hebex
+  url: https://hebex-wiki.orangeportails.net
+  icon: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Orange_logo.svg/1200px-Orange_logo.svg.png
+  categories: Hebex;DFY;Orange;Wiki;
+
+webmail:
+  name: Webmail Orange Hebex
+  url: https://exchange-eme2.itn.ftgroup/owa/
+  icon: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Orange_logo.svg/1200px-Orange_logo.svg.png
+  categories: Hebex;DFY;Orange;Mail;
+
+mattermost:
+  name: Mattermost Orange Hebex
+  url: https://mattermost.si.francetelecom.fr
+  icon: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Orange_logo.svg/1200px-Orange_logo.svg.png
+  categories: Hebex;DFY;Orange;Mattermost;Chat;
+
+
+ 
