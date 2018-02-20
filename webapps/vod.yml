@@ -1,0 +1,7 @@
+# VOD sites
+
+netflix:
+  name: Netflix
+  url: https://netflix.com
+  icon: https://upload.wikimedia.org/wikipedia/commons/f/ff/Netflix-new-icon.png
+  categories: Netflix;Media;VOD;TV shows;Movies;

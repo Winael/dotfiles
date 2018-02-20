@@ -1,0 +1,31 @@
+# Google Apps
+
+youtube:
+  name: YouTube
+  url: https://youtube.com
+  icon: https://upload.wikimedia.org/wikipedia/commons/4/4c/YouTube_icon.png
+  categories: Google;Media;Video;
+
+google_play_music:
+  name: Google Play Music
+  url: https://play.google.com/music/listen
+  icon: https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Play_music_triangle.svg/512px-Play_music_triangle.svg.png
+  categories: Google;Music;
+
+google_docs:
+  name: Google Docs
+  url: https://docs.google.com
+  icon: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Antu_google-docs.svg/512px-Antu_google-docs.svg.png
+  categories: Google;Documents;Office;Writter;
+
+google_inbox:
+  name: Google Inbox
+  url: https://inbox.google.com
+  icon: https://upload.wikimedia.org/wikipedia/commons/d/de/Google_Inbox_by_Gmail_logo.png
+  categories: Google;Mail;
+
+google_drive:
+  name: Google Drive
+  url: https://drive.google.com
+  icon: https://upload.wikimedia.org/wikipedia/commons/9/9b/Logo_of_Google_Drive.png 
+  categories: Google;Drive;
