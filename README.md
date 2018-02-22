@@ -14,5 +14,7 @@ Ubuntu Mate 18.04 LTS
 - nm-applet
 - Network-manager
 
+## Liens utiles 
 
+- [Using i3 in Ubuntu MATE](https://elektrubadur.se/2017/05/27/using-i3-in-ubuntu-mate/)
 
