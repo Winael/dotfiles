@@ -1,0 +1,288 @@
+#################################################
+# Snippets for Terraform                        #
+#################################################
+
+
+# AWS Provider
+
+## AWS Providers
+
+snippet provider_aws "Snippet for AWS provider" b
+provider "aws" {
+
+  # The Amazon Web Services (AWS) provider is used to interact with the many resources supported by AWS. The provider needs to be configured with the proper credentials before it can be used.
+
+  # The following options are required
+
+  region = ""
+
+  # The following options are not required. Uncomment to use it or delete following lines
+  #
+  # access_key = ""
+  # secret_key = ""
+  # profile = ""
+  # assume_role = ""
+  # shared_credentials_file = (Optional)
+  # token = ""
+  # max_retries = ""
+  # allowed_account_ids = ""
+  # forbidden_account_ids = ""
+  # insecure = ""
+  # skip_credentials_validation = ""
+  # skip_get_ec2_platforms = ""
+  # skip_region_validation = ""
+  # skip_requesting_account_id = ""
+  # skip_metadata_api_check = ""
+  # s3_force_path_style = ""
+
+}
+endsnippet
+
+## AWS Datasources
+
+snippet datasource_aws_elb "Snippet for aws_elb datasource" b
+data "aws_elb "$1" {
+
+  # Provides information about a "classic" Elastic Load Balancer (ELB). See LB Data Source if you are looking for "v2" Application Load Balancer (ALB) or Network Load Balancer (NLB).
+  # This data source can prove useful when a module accepts an LB as an input variable and needs to, for example, determine the security groups associated with it, etc.
+
+  # The following arguments are required
+
+  name = ""
+
+}
+endsnippet
+
+snippet datasource_aws_instance "Snippet for aws_instance datasource" b
+data "aws_instance" "$1" {
+
+  # Use this data source to get the ID of an Amazon EC2 Instance for use in other resources.
+
+  # At least one of filter, instance_tags, or instance_id must be specified.
+  #
+  # instance_id = ""
+  # instance_tag = ""
+  # filter = ""
+  # get_password_data = ""
+
+}
+endsnippet
+snippet datasource_aws_instances "Snippet for aws_instances datasource" b
+
+data "aws_instances" "$1" {
+
+  # Use this data source to get IDs or IPs of Amazon EC2 instances to be referenced elsewhere, e.g. to allow easier migration from another management solution or to make it easier for an operator to connect through bastion host(s).
+
+  # The following options are not required. Uncomment to use it or delete following lines
+  #
+  # instance_tags = ""
+  # filter = ""
+
+}
+endsnippet
+
+## AWS Resources
+
+### EC2 Resources
+
+snippet resource_aws_elb "Snippet for AWS EC2 aws_elb resource" b
+resource "aws_elb" "$1" {
+
+  # Provides an Elastic Load Balancer resource, also known as a "Classic Load Balancer" after the release of Application/Network Load Balancers.
+
+  # Exactly one of availability_zones or subnets must be specified: this determines if the ELB exists in a VPC or in EC2-classic. Use availability_zones for EC2-classic ELB or subnets for VPC ELB.
+
+  # The following arguments are required :
+
+  listener = ""
+  availability_zones = ""
+  subnets = ""
+
+  # The following arguments are optioals. Uncomment the line to use it or delete block.
+  #
+  # name = ""
+  # name_prefix = ""
+  # access_logs = ""
+  # security_groups = ""
+  # instances = ""
+  # internal = ""
+  # health_check = ""
+  # cross_zone_load_balancing = ""
+  # idle_timeout = ""
+  # connection_draining = ""
+  # connection_draining_timeout = ""
+  # tags = ""
+
+  access_logs {
+
+    # The following arguments are required :
+
+    bucket = ""
+
+    # The following arguments are optioals. Uncomment the line to use it or delete block.
+    #
+    # bucket_prefix = ""
+    # interval = ""
+    # enabled = ""
+
+  }
+
+  listener {
+
+    # The following arguments are required :
+
+    instance_port = ""
+    instance_protocol = ""
+    lb_port = ""
+    lb_protocol = ""
+
+    # The following arguments are optioals. Uncomment the line to use it or delete block.
+    #
+    # ssl_certificate_id = ""
+
+  }
+
+  health_check {
+
+    # The following arguments are required :
+
+    healthy_threshold = ""
+    unhealthy_threshold = ""
+
+    # Target of the check. Valid pattern is "${PROTOCOL}:${PORT}${PATH}", where PROTOCOL values are:
+    # - HTTP, HTTPS - PORT and PATH are required
+    # - TCP, SSL - PORT is required, PATH is not supported
+
+    target = ""
+    interval = ""
+    timeout = ""
+
+  }
+}
+endsnippet
+
+snippet resource_aws_instance "Snippet for AWS EC2 aws_instance resource" b
+resource "aws_instance" "$1" {
+
+  # Provides an EC2 instance resource. This allows instances to be created, updated, and deleted. Instances also support provisioning.
+
+  # The following options are required
+
+  ami = ""
+  instance_type = ""
+
+  # The following options are not required. Uncomment to use it or delete following lines
+  #
+  # availability_zone = ""
+  # placement_group = ""
+  # tenancy = ""
+  # ebs_optimized = ""
+  # disable_api_termination = ""
+  # instance_initiated_shutdown_behavior = ""
+  # key_name = ""
+  # get_password_data = ""
+  # monitoring = ""
+  # security_groups = ""
+  # vpc_security_group_ids = ""
+  # subnet_id = ""
+  # associate_public_ip_address = ""
+  # private_ip = ""
+  # source_dest_check = ""
+  # user_data = ""
+  # user_data_base64 = ""
+  # iam_instance_profile = ""
+  # ipv6_address_count = ""
+  # ipv6_addresses = ""
+  # tags = ""
+  # volume_tags = ""
+  # root_block_device = ""
+  # ebs_block_device = ""
+  # ephemeral_block_device = ""
+  # network_interface = ""
+  # credit_specification = ""
+}
+endsnippet
+
+# V-Sphere Provider
+
+## V-Sphere Providers
+
+snippet provider_vsphere "Snippet for V-Sphere provider" b
+provider "vsphere" {
+  user = "${var.vsphere_user}"
+  password = "${var.vsphere_password}"
+  vsphere_server = "${var.vsphere_server}"
+
+  # true If you have a self-signed cert, else false
+  allow_unverified_ssl = $1
+}
+endsnippet
+
+## V-Sphere Datasources
+
+snippet data_vsphere_datacenter "Snippet for V-Sphere Datacenter" b
+data "vsphere_datacenter" "$1" {
+  name = "$2"
+}
+endsnippet
+
+snippet data_vsphere_datastore "Snippet for V-Sphere Datastore" b
+data "vsphere_datastore" "$1" {
+  name          = "$2"
+  datacenter_id = "${data.vsphere_datacenter.$3.id}"
+}
+endsnippet
+
+snippet data_vsphere_resource_pool "Snippet for V-Sphere Resource Pool" b
+data "vsphere_resource_pool" "$1" {
+  name          = "$2"
+  datacenter_id = "${data.vsphere_datacenter.$3.id}"
+}
+endsnippet
+
+snippet data_vsphere_network "Snippet for V-Sphere Network" b
+data "vsphere_network" "$1" {
+  name          = "$2"
+  datacenter_id = "${data.vsphere_datacenter.$3.id}"
+}
+endsnippet
+
+## V-Sphere Resources
+
+snippet resource_vsphere_virtual_machine "Snippet for V-Sphere Virtual Machine resource" b
+resource "vsphere_virtual_machine" "$1" {
+
+  # The following options are required
+
+  name             = "$2"
+  resource_pool_id = "${data.vsphere_resource_pool.$3.id}"
+
+  network_interface {
+    network_id = "${data.vsphere_network.$8.id}"
+  }
+
+  disk {
+    label = "$9"
+    size  = $10
+  }
+
+  # The following options are not required. Uncomment to use it or delete following lines
+  #
+  # datastore_id         =
+  # datastore_cluster_id =
+  # folder               =
+  # host_system_id       =
+  # cd_rom               =
+  # clone                =
+  # vapp                 =
+  # guest_id             =
+  # alternate_guest_name =
+  # annotation           =
+  # firmware             =
+  # extra_config         =
+  # scsi_type            =
+  # tags                 =
+  # custom_attributes    =
+
+}
+endsnippet                      
