@@ -5,3 +5,9 @@ netflix:
   url: https://netflix.com
   icon: https://upload.wikimedia.org/wikipedia/commons/f/ff/Netflix-new-icon.png
   categories: Netflix;Media;VOD;TV shows;Movies;
+
+amazon_prime:
+  name: Amazon Prime Video
+  url: https://www.primevideo.com
+  icon: https://upload.wikimedia.org/wikipedia/commons/f/f1/Prime_Video.png
+  categories: Amazon Prime Video;Media;VOD;TV shows;Movies;
