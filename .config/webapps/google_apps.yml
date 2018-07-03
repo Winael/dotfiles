@@ -5,6 +5,12 @@ youtube:
   url: https://youtube.com
   icon: https://upload.wikimedia.org/wikipedia/commons/4/4c/YouTube_icon.png
   categories: Google;Media;Video;
+  
+youtube-music:
+  name: YouTube Music
+  url: https://music.youtube.com
+  icon: https://en.wikipedia.org/wiki/YouTube_Music#/media/File:YouTubeMusic_Logo.png
+  categories: Google;Media;Video;Music;
 
 google_play_music:
   name: Google Play Music
@@ -17,6 +23,12 @@ google_docs:
   url: https://docs.google.com
   icon: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Antu_google-docs.svg/512px-Antu_google-docs.svg.png
   categories: Google;Documents;Office;Writter;
+  
+google_slides:
+  name: Google Slides
+  url: https://docs.google.com/presentation/u/0/  
+  icon: https://3.bp.blogspot.com/-Xgy8k-BxOfg/WgW4jipZLsI/AAAAAAAAulA/kRs0H-cGFXkIsdql6TMunGY5fzY4ZP4NgCK4BGAYYCw/s1600/google_slides1600.png  
+  categories: Google;Documents;Office;Slides;
 
 google_inbox:
   name: Google Inbox
@@ -29,3 +41,9 @@ google_drive:
   url: https://drive.google.com
   icon: https://upload.wikimedia.org/wikipedia/commons/9/9b/Logo_of_Google_Drive.png 
   categories: Google;Drive;
+
+google_photos:
+  name: Google Photos
+  url: https://photos.google.com
+  icon: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Google_Photos_icon.svg/96px-Google_Photos_icon.svg.png
+  categories: Pictures;Photos;Images;
