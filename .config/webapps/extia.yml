@@ -1,0 +1,25 @@
+# Extia sites
+
+campus_agile:
+  name: Campus Agile by Extia
+  url: https://campus-agile.extia.fr
+  icon: https://campus-agile.extia.fr/wp-content/uploads/2017/07/logo_blanc.png
+  categories: Extia;Agility;MOOC;
+
+slack_extia:
+  name: Slack Extia
+  url: https://extia-cm.slack.com
+  icon: https://upload.wikimedia.org/wikipedia/commons/b/b1/Logo_Extia.png
+  categories: Extia;Slack;Chat;Communautes Metiers;
+
+vamos-life:
+  name: Vamos Life
+  url: https://vamos-life.extia.fr
+  icon: 
+  categories: Extia;Vamos-life;Intranet
+  
+intranet:
+  name: Intranet Extia
+  url: https://intra.extia.fr
+  icon:
+  categories: Extia; Intranet
