@@ -34,15 +34,20 @@ with open(sys.argv[1], 'r') as conffile:
 
             df.write("[Desktop Entry]\n")
             df.write("Name=" + webapp[1]['name'] + "\n")
-            df.write("Exec=chromium --app=" + webapp[1]['url'] + "\n")
+
+            if webapp[1]['drm'] == False:
+                df.write("Exec=chromium-browser --app=" + webapp[1]['url'] + "\n")
+            else:
+                df.write("Exec=google-chrome --app=" + webapp[1]['url'] + "\n")
+
             df.write("Icon=" + icon_path + webapp[0] + ".png\n")
             df.write("Type=Application\n")
             df.write("Categories=Webapp;" + webapp[1]['categories'])
-            
+
             df.close()
 
             os.chmod(desktop_path + webapp[0] + ".desktop",0775)
 
     except yaml.YAMLError as esc:
 
-        print(esc)        
+        print(esc)
