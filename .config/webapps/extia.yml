@@ -15,11 +15,11 @@ slack_extia:
 vamos-life:
   name: Vamos Life
   url: https://vamos-life.extia.fr
-  icon: 
+  icon: https://vamos-life.extia.fr/static/favicon/favicon-32x32.png
   categories: Extia;Vamos-life;Intranet
   
 intranet:
   name: Intranet Extia
   url: https://intra.extia.fr
-  icon:
+  icon: https://upload.wikimedia.org/wikipedia/commons/b/b1/Logo_Extia.png
   categories: Extia; Intranet
